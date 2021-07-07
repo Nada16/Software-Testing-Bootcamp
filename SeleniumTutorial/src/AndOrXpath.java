@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -15,9 +14,8 @@ public class AndOrXpath {
 		System.setProperty("webdriver.gecko.driver", "C:\\tools\\selenium\\geckodriver.exe");
 		WebDriver driver=new FirefoxDriver();
 
-		//open browser with desried URL
+		//open browser with desried URL and maximize window
 		driver.get(codingdojoUrl);
-		//maximize window
 		driver.manage().window().maximize();
 		Thread.sleep(2000);
 
@@ -25,7 +23,7 @@ public class AndOrXpath {
 		driver.findElements(By.xpath("//a[@class='cta_blue_btn apply_btn_nav' and contains(text(),'Apply')]")).get(1).click();
 		Thread.sleep(7000);
 		
-		//Close the new opened tab
+		//Close the newly opened tab
 		ArrayList<String> tabs2 = new ArrayList<String> (driver.getWindowHandles());
 		driver.switchTo().window(tabs2.get(1));
 		driver.close();
