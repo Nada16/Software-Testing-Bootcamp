@@ -9,14 +9,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class ChildXpath {
 	public static void main(String[] args) throws InterruptedException {
 		//Testing url
-		String codingdojoUrl = "https://www.aramco.com/";
+		String aramcoUrl = "https://www.aramco.com/";
 
 		//----Setting up Firefox Driver----
 		System.setProperty("webdriver.gecko.driver", "C:\\tools\\selenium\\geckodriver.exe");
 		WebDriver driver=new FirefoxDriver();
 
 		//open browser with desried URL and maximize window
-		driver.get(codingdojoUrl);
+		driver.get(aramcoUrl);
 		driver.manage().window().maximize();
 		Thread.sleep(4000);
 
