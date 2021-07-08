@@ -20,7 +20,7 @@ public class BasicXpath {
 		Thread.sleep(2000);
 
 		//Click on 'Our Team'
-		driver.findElement(By.xpath("//a[contains(text(),'Our Team')]")).click();
+		driver.findElement(By.xpath("//a[text()='Our Team']")).click();
 		Thread.sleep(2000);
 
 		//Declare Javascript executor from the driver
