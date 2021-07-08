@@ -4,6 +4,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class FollowingXpath {
 	public static void main(String[] args) throws InterruptedException {
@@ -19,9 +21,13 @@ public class FollowingXpath {
 		driver.manage().window().maximize();
 		Thread.sleep(4000);
 
+		//Wait for the Cookies notice
+		WebElement cookie = driver.findElement(By.xpath("//a[@class='cta cta__primary cookie-policy__cta']"));
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		wait.until(ExpectedConditions.visibilityOf(cookie));
 		//Accept cookies
-		driver.findElement(By.xpath("//a[@class='cta cta__primary cookie-policy__cta']")).click();
-
+		cookie.click();
+		
 		//Click on the search symbol and search for "Aramco"
 		String sxpath = "//button[@class='main-nav__main-search-open']";
 		driver.findElement(By.xpath(sxpath)).click();
