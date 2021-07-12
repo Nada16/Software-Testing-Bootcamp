@@ -1,46 +1,34 @@
 import java.util.ArrayList;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.safari.SafariDriver.WindowType;
 
 public class Windows {
 	public static void main(String[] args) throws InterruptedException {
 		//Perform test on IE,Firefox and Chrome
-		testIE();
+		testEdge();
 		testFirefox();
 		testChrome();
 	}
 
-	private static void testIE() throws InterruptedException {
-		//----Setting up Internet Explorer Driver----
-		System.setProperty("webdriver.ie.driver", "C:\\tools\\selenium\\IEDriverServer.exe");
+	private static void testEdge() throws InterruptedException {
+		//----Setting up Edge Driver----
+		System.setProperty("webdriver.edge.driver",  "C:\\tools\\selenium\\msedgedriver.exe");
 		//Change capabilities of the driver to open private mode
-		DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
-		capabilities.setCapability(InternetExplorerDriver.FORCE_CREATE_PROCESS, true);
-		capabilities.setCapability(InternetExplorerDriver.IE_SWITCHES, "-private");
-		@SuppressWarnings("deprecation")
-		InternetExplorerDriver iedriver = new InternetExplorerDriver(capabilities);
-		
-		//Open link in private window
-		openIMDB(iedriver);
+		EdgeOptions op=new EdgeOptions();
+		op.setCapability("ms:inPrivate", true);		
+		//Initiating your edgedriver
+		WebDriver iedriver=new EdgeDriver(op);
 
-		// Open box office in a new window using a new driver 
-		WebDriver newWindow = new InternetExplorerDriver();
-		openWindow(iedriver, newWindow);
-
-		//Open new tab
-		openTab(newWindow);	
-		iedriver.quit();
+		//Perform the test
+		performTest(iedriver);
 	}
 
 	private static void testFirefox() throws InterruptedException {
@@ -55,16 +43,8 @@ public class Windows {
 		@SuppressWarnings("deprecation")
 		WebDriver fdriver = new FirefoxDriver(caps);
 
-		//Open link in private window
-		openIMDB(fdriver);
-
-		// Open box office in a new window using a new driver 
-		WebDriver newWindow = new FirefoxDriver();
-		openWindow(fdriver, newWindow);
-
-		//Open new tab
-		openTab(newWindow);	
-		fdriver.quit();
+		//Perform the test
+		performTest(fdriver);
 	}
 
 	private static void testChrome() throws InterruptedException {
@@ -73,54 +53,58 @@ public class Windows {
 		//Change capabilities of the driver to open private mode
 		ChromeOptions options1 = new ChromeOptions();
 		options1.addArguments("--incognito");
-        DesiredCapabilities caps = new DesiredCapabilities();
-        caps.setCapability(ChromeOptions.CAPABILITY,options1);
+		DesiredCapabilities caps = new DesiredCapabilities();
+		caps.setCapability(ChromeOptions.CAPABILITY,options1);
 		//Initiating your chromedriver
 		@SuppressWarnings("deprecation")
 		WebDriver chdriver=new ChromeDriver(caps);
-		
-		//Open link in private window
-		openIMDB(chdriver);
 
-		// Open box office in a new window using a new driver 
-		WebDriver newWindow = new ChromeDriver();
-		openWindow(chdriver, newWindow);
-
-		//Open new tab
-		openTab(newWindow);	
-		chdriver.quit();
+		//Perform the test
+		performTest(chdriver);
 	}
 
-	public static void openIMDB(WebDriver driver) throws InterruptedException {
+	public static void performTest(WebDriver driver) throws InterruptedException {
+		Thread.sleep(2000);
+		//Open IMDB in private window
+		openIMDB(driver);
+		Thread.sleep(1000);
+
+		// Open box office in a new window using a new driver 
+		openWindow(driver);
+		Thread.sleep(2000);
+
+		//Open the first box office movie on a new tab
+		openTab(driver);	
+		Thread.sleep(5000);
+
+		//Close driver
+		driver.quit();
+	}
+
+	public static void openIMDB(WebDriver driver) {
 		//Testing url
 		String url = "https://www.imdb.com/";
-
 		//Maximize window and open URL
 		driver.manage().window().maximize();
 		driver.get(url);
-		Thread.sleep(1000);
 	}
-	
-	private static void openWindow(WebDriver driver, WebDriver newWindow) throws InterruptedException {
-		String BOLink = driver.findElement(By.xpath("//h3[text()='Top box office (US)']/parent::a")).getAttribute("href");
 
-		//Maximize window and open URL
+	private static void openWindow(WebDriver driver) {
+		//Open new window
+		String openinNewWindow = Keys.chord(Keys.SHIFT,Keys.RETURN);
+		driver.findElement(By.xpath("//h3[text()='Top box office (US)']/parent::a")).sendKeys(openinNewWindow);
+		//Switch to newly opened window and maximize it
+		ArrayList<String> windows = new ArrayList<String> (driver.getWindowHandles());
+		driver.switchTo().window(windows.get(1));
 		driver.manage().window().maximize();
-		newWindow.get(BOLink);
-
-		Thread.sleep(1000);
 	}
-	
+
 	public static void openTab(WebDriver driver) throws InterruptedException {
 		// Open new tab
 		String openinNewTab = Keys.chord(Keys.CONTROL,Keys.RETURN);
 		driver.findElement(By.xpath("//tr[1]/td/a[1]")).sendKeys(openinNewTab);
+		//switch to newly opened tab
 		ArrayList<String> tabs = new ArrayList<String> (driver.getWindowHandles());
-
-		driver.switchTo().window(tabs.get(1));
-
-		Thread.sleep(100000);
-
-		driver.quit();
+		driver.switchTo().window(tabs.get(2));
 	}
 }
