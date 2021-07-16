@@ -17,7 +17,7 @@ public class DatePicker {
 		//open browser with desired URL and maximise window
 		driver.get(url);
 		driver.manage().window().maximize();
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 
 		//Wait for the Cookies notice
 		WebElement cookie = driver.findElement(By.xpath("//form[@method='post']/descendant::button[@id='travelContinue']"));
@@ -31,14 +31,12 @@ public class DatePicker {
 		driver.findElement(By.xpath("//div[@id='ui-date-outbound--button']")).click();
 		Thread.sleep(2000);
 		
-		//Get date elements
-		List<WebElement> dates = driver.findElements(By.cssSelector("div.fg-5 td:not([class*='disabled']) a"));
-		
 		//Get today's date
 		Calendar c = Calendar.getInstance();
 		int day = c.get(Calendar.DAY_OF_MONTH);
-
-		//Get element with same date as today
+		
+		//Get date elements and pick element with same date as today
+		List<WebElement> dates = driver.findElements(By.cssSelector("div.fg-5 td:not([class*='disabled']) a"));
 		for(WebElement date: dates) {
 			if(date.getText().equals(String.valueOf(day))) {
 				date.click();
@@ -51,10 +49,8 @@ public class DatePicker {
 		driver.findElement(By.xpath("//div[@id='ui-date-inbound--button']")).click();
 		Thread.sleep(2000);
 		
-		//Get date elements
+		//Get date elements and pick element with same date as (today + 5days)
 		dates = driver.findElements(By.cssSelector("div.fg-5 td:not([class*='disabled']) a"));
-		
-		//Get element with same date as return date (today + 5days)
 		for(WebElement date: dates) {
 			if(date.getText().equals(String.valueOf(day+5))) {
 				date.click();
