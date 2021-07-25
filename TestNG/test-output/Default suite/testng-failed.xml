@@ -3,11 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestNG1">
+      <class name="YoutubeError">
         <methods>
-          <include name="testGoogle"/>
+          <include name="closeDriver"/>
+          <include name="checkSubscription"/>
+          <include name="createDriver"/>
+          <include name="checkTitle"/>
+          <include name="homepage"/>
         </methods>
-      </class> <!-- TestNG1 -->
+      </class> <!-- YoutubeError -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
