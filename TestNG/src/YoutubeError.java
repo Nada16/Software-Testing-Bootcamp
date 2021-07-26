@@ -2,6 +2,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
@@ -38,6 +39,7 @@ public class YoutubeError {
 		//Check the text of the error message
 		String error = driver.findElement(By.cssSelector("yt-formatted-string.promo-body-text.style-scope.ytd-background-promo-renderer")).getText();
 		Assert.assertEquals(error,"Sign in to access videos that you’ve liked or saved");
+		Reporter.log("- Library tab is opened and message is checked");
 	}
 	
 	@Test
@@ -48,6 +50,7 @@ public class YoutubeError {
 		//Check the text of the error message
 		String error = driver.findElements(By.cssSelector("yt-formatted-string.promo-body-text.style-scope.ytd-background-promo-renderer")).get(1).getText();
 		Assert.assertEquals(error,"Sign in to see updates from your favorite YouTube channels");
+		Reporter.log("- Subscriptions tab is opened and message is checked");
 	}
 	
 	@AfterMethod 
