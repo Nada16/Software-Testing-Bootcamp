@@ -1,31 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[Values to be searched for: ]]>
+    </line>
+    <line>
+      <![CDATA[Google]]>
+    </line>
+    <line>
+      <![CDATA[Values to be searched for: ]]>
+    </line>
+    <line>
+      <![CDATA[Saudi Digital Academy]]>
+    </line>
+    <line>
+      <![CDATA[Coding Dojo]]>
+    </line>
+    <line>
+      <![CDATA[Values to be searched for: ]]>
+    </line>
+    <line>
+      <![CDATA[JUnit Testing]]>
+    </line>
+    <line>
+      <![CDATA[Selenium]]>
+    </line>
+    <line>
+      <![CDATA[TestNG]]>
+    </line>
   </reporter-output>
-  <suite started-at="2021-07-26T12:21:22 AST" name="Default suite" finished-at="2021-07-26T12:21:35 AST" duration-ms="12964">
+  <suite started-at="2021-07-26T17:49:14 AST" name="Default suite" finished-at="2021-07-26T17:50:04 AST" duration-ms="49313">
     <groups>
     </groups>
-    <test started-at="2021-07-26T12:21:22 AST" name="Default test" finished-at="2021-07-26T12:21:35 AST" duration-ms="12964">
+    <test started-at="2021-07-26T17:49:14 AST" name="Default test" finished-at="2021-07-26T17:50:04 AST" duration-ms="49313">
       <class name="ExcelTest">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:ExcelTest@193f604a]" started-at="2021-07-26T12:21:22 AST" name="beforeMethod" finished-at="2021-07-26T12:21:32 AST" duration-ms="10119" status="PASS">
+        <test-method is-config="true" signature="InitialiseBrowser()[pri:0, instance:ExcelTest@2fd1433e]" started-at="2021-07-26T17:49:15 AST" name="InitialiseBrowser" finished-at="2021-07-26T17:49:26 AST" duration-ms="10638" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="test(java.lang.String)[pri:0, instance:ExcelTest@193f604a]" started-at="2021-07-26T12:21:32 AST" name="test" data-provider="search" finished-at="2021-07-26T12:21:35 AST" duration-ms="2249" status="PASS">
+        </test-method> <!-- InitialiseBrowser -->
+        <test-method signature="testSearch([Ljava.lang.String;)[pri:0, instance:ExcelTest@2fd1433e]" started-at="2021-07-26T17:49:26 AST" name="testSearch" data-provider="search" finished-at="2021-07-26T17:49:28 AST" duration-ms="2232" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[TestNG]]>
+                <![CDATA[[Ljava.lang.String;@49c8f6e8]]>
               </value>
             </param>
           </params>
           <reporter-output>
+            <line>
+              <![CDATA[Values to be searched for: ]]>
+            </line>
+            <line>
+              <![CDATA[Google]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- test -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:ExcelTest@193f604a]" started-at="2021-07-26T12:21:35 AST" name="afterMethod" finished-at="2021-07-26T12:21:35 AST" duration-ms="135" status="PASS">
+        </test-method> <!-- testSearch -->
+        <test-method is-config="true" signature="CloseDriver()[pri:0, instance:ExcelTest@2fd1433e]" started-at="2021-07-26T17:49:28 AST" name="CloseDriver" finished-at="2021-07-26T17:49:30 AST" duration-ms="1665" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterMethod -->
+        </test-method> <!-- CloseDriver -->
+        <test-method is-config="true" signature="InitialiseBrowser()[pri:0, instance:ExcelTest@2fd1433e]" started-at="2021-07-26T17:49:30 AST" name="InitialiseBrowser" finished-at="2021-07-26T17:49:40 AST" duration-ms="10144" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InitialiseBrowser -->
+        <test-method signature="testSearch([Ljava.lang.String;)[pri:0, instance:ExcelTest@2fd1433e]" started-at="2021-07-26T17:49:40 AST" name="testSearch" data-provider="search" finished-at="2021-07-26T17:49:44 AST" duration-ms="4579" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@7afbf561]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Values to be searched for: ]]>
+            </line>
+            <line>
+              <![CDATA[Saudi Digital Academy]]>
+            </line>
+            <line>
+              <![CDATA[Coding Dojo]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testSearch -->
+        <test-method is-config="true" signature="CloseDriver()[pri:0, instance:ExcelTest@2fd1433e]" started-at="2021-07-26T17:49:44 AST" name="CloseDriver" finished-at="2021-07-26T17:49:46 AST" duration-ms="1391" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseDriver -->
+        <test-method is-config="true" signature="InitialiseBrowser()[pri:0, instance:ExcelTest@2fd1433e]" started-at="2021-07-26T17:49:46 AST" name="InitialiseBrowser" finished-at="2021-07-26T17:49:56 AST" duration-ms="9783" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InitialiseBrowser -->
+        <test-method signature="testSearch([Ljava.lang.String;)[pri:0, instance:ExcelTest@2fd1433e]" started-at="2021-07-26T17:49:56 AST" name="testSearch" data-provider="search" finished-at="2021-07-26T17:50:02 AST" duration-ms="6558" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@2f98635e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Values to be searched for: ]]>
+            </line>
+            <line>
+              <![CDATA[JUnit Testing]]>
+            </line>
+            <line>
+              <![CDATA[Selenium]]>
+            </line>
+            <line>
+              <![CDATA[TestNG]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testSearch -->
+        <test-method is-config="true" signature="CloseDriver()[pri:0, instance:ExcelTest@2fd1433e]" started-at="2021-07-26T17:50:02 AST" name="CloseDriver" finished-at="2021-07-26T17:50:04 AST" duration-ms="1341" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseDriver -->
       </class> <!-- ExcelTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

@@ -7,7 +7,7 @@
         <methods>
           <include name="beforeMethod"/>
           <include name="test"/>
-          <include name="afterMethod"/>
+          <include name="afterTest"/>
         </methods>
       </class> <!-- ExcelTest -->
     </classes>
