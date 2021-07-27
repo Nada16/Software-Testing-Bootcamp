@@ -29,16 +29,16 @@
       <![CDATA[TestNG]]>
     </line>
   </reporter-output>
-  <suite started-at="2021-07-26T17:49:14 AST" name="Default suite" finished-at="2021-07-26T17:50:04 AST" duration-ms="49313">
+  <suite started-at="2021-07-27T11:57:46 AST" name="Default suite" finished-at="2021-07-27T11:58:34 AST" duration-ms="47853">
     <groups>
     </groups>
-    <test started-at="2021-07-26T17:49:14 AST" name="Default test" finished-at="2021-07-26T17:50:04 AST" duration-ms="49313">
+    <test started-at="2021-07-27T11:57:46 AST" name="Default test" finished-at="2021-07-27T11:58:34 AST" duration-ms="47853">
       <class name="ExcelTest">
-        <test-method is-config="true" signature="InitialiseBrowser()[pri:0, instance:ExcelTest@2fd1433e]" started-at="2021-07-26T17:49:15 AST" name="InitialiseBrowser" finished-at="2021-07-26T17:49:26 AST" duration-ms="10638" status="PASS">
+        <test-method is-config="true" signature="InitialiseBrowser()[pri:0, instance:ExcelTest@2fd1433e]" started-at="2021-07-27T11:57:47 AST" name="InitialiseBrowser" finished-at="2021-07-27T11:57:56 AST" duration-ms="9871" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- InitialiseBrowser -->
-        <test-method signature="testSearch([Ljava.lang.String;)[pri:0, instance:ExcelTest@2fd1433e]" started-at="2021-07-26T17:49:26 AST" name="testSearch" data-provider="search" finished-at="2021-07-26T17:49:28 AST" duration-ms="2232" status="PASS">
+        <test-method signature="testSearch([Ljava.lang.String;)[pri:0, instance:ExcelTest@2fd1433e]" started-at="2021-07-27T11:57:56 AST" name="testSearch" data-provider="searchValues" finished-at="2021-07-27T11:57:59 AST" duration-ms="2126" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -55,15 +55,15 @@
             </line>
           </reporter-output>
         </test-method> <!-- testSearch -->
-        <test-method is-config="true" signature="CloseDriver()[pri:0, instance:ExcelTest@2fd1433e]" started-at="2021-07-26T17:49:28 AST" name="CloseDriver" finished-at="2021-07-26T17:49:30 AST" duration-ms="1665" status="PASS">
+        <test-method is-config="true" signature="CloseDriver()[pri:0, instance:ExcelTest@2fd1433e]" started-at="2021-07-27T11:57:59 AST" name="CloseDriver" finished-at="2021-07-27T11:58:00 AST" duration-ms="1169" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseDriver -->
-        <test-method is-config="true" signature="InitialiseBrowser()[pri:0, instance:ExcelTest@2fd1433e]" started-at="2021-07-26T17:49:30 AST" name="InitialiseBrowser" finished-at="2021-07-26T17:49:40 AST" duration-ms="10144" status="PASS">
+        <test-method is-config="true" signature="InitialiseBrowser()[pri:0, instance:ExcelTest@2fd1433e]" started-at="2021-07-27T11:58:00 AST" name="InitialiseBrowser" finished-at="2021-07-27T11:58:10 AST" duration-ms="9721" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- InitialiseBrowser -->
-        <test-method signature="testSearch([Ljava.lang.String;)[pri:0, instance:ExcelTest@2fd1433e]" started-at="2021-07-26T17:49:40 AST" name="testSearch" data-provider="search" finished-at="2021-07-26T17:49:44 AST" duration-ms="4579" status="PASS">
+        <test-method signature="testSearch([Ljava.lang.String;)[pri:0, instance:ExcelTest@2fd1433e]" started-at="2021-07-27T11:58:10 AST" name="testSearch" data-provider="searchValues" finished-at="2021-07-27T11:58:14 AST" duration-ms="4316" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -83,15 +83,15 @@
             </line>
           </reporter-output>
         </test-method> <!-- testSearch -->
-        <test-method is-config="true" signature="CloseDriver()[pri:0, instance:ExcelTest@2fd1433e]" started-at="2021-07-26T17:49:44 AST" name="CloseDriver" finished-at="2021-07-26T17:49:46 AST" duration-ms="1391" status="PASS">
+        <test-method is-config="true" signature="CloseDriver()[pri:0, instance:ExcelTest@2fd1433e]" started-at="2021-07-27T11:58:14 AST" name="CloseDriver" finished-at="2021-07-27T11:58:15 AST" duration-ms="1119" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseDriver -->
-        <test-method is-config="true" signature="InitialiseBrowser()[pri:0, instance:ExcelTest@2fd1433e]" started-at="2021-07-26T17:49:46 AST" name="InitialiseBrowser" finished-at="2021-07-26T17:49:56 AST" duration-ms="9783" status="PASS">
+        <test-method is-config="true" signature="InitialiseBrowser()[pri:0, instance:ExcelTest@2fd1433e]" started-at="2021-07-27T11:58:15 AST" name="InitialiseBrowser" finished-at="2021-07-27T11:58:26 AST" duration-ms="10867" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- InitialiseBrowser -->
-        <test-method signature="testSearch([Ljava.lang.String;)[pri:0, instance:ExcelTest@2fd1433e]" started-at="2021-07-26T17:49:56 AST" name="testSearch" data-provider="search" finished-at="2021-07-26T17:50:02 AST" duration-ms="6558" status="PASS">
+        <test-method signature="testSearch([Ljava.lang.String;)[pri:0, instance:ExcelTest@2fd1433e]" started-at="2021-07-27T11:58:26 AST" name="testSearch" data-provider="searchValues" finished-at="2021-07-27T11:58:32 AST" duration-ms="6472" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -114,7 +114,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- testSearch -->
-        <test-method is-config="true" signature="CloseDriver()[pri:0, instance:ExcelTest@2fd1433e]" started-at="2021-07-26T17:50:02 AST" name="CloseDriver" finished-at="2021-07-26T17:50:04 AST" duration-ms="1341" status="PASS">
+        <test-method is-config="true" signature="CloseDriver()[pri:0, instance:ExcelTest@2fd1433e]" started-at="2021-07-27T11:58:32 AST" name="CloseDriver" finished-at="2021-07-27T11:58:34 AST" duration-ms="1260" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseDriver -->

@@ -30,13 +30,16 @@ public class ExcelTest {
 		Thread.sleep(1000);
 	} 
 
-	//Create a test case for the Application accepting data from Excel using Data Provider.
-	@Test(dataProvider = "search")
+	@Test(dataProvider = "searchValues")
+	//Read testcases values using Data Provider
 	public void testSearch(String[] testcaseValues) throws InterruptedException {
 		Reporter.log("Values to be searched for: ");
+		//Use testcases values to search in google
 		for(int i = 0; i < testcaseValues.length; i++) {
+			//Clear search box every time so that it dose not concatenate strings
 			WebElement searchBox = driver.findElement(By.name("q"));
 			searchBox.clear();
+
 			searchBox.sendKeys(testcaseValues[i] + Keys.ENTER);
 			Reporter.log(testcaseValues[i]);
 			Thread.sleep(2000);
@@ -49,20 +52,20 @@ public class ExcelTest {
 	}
 
 	@DataProvider
-	public String[][] search() throws Exception{
+	public String[][] searchValues() throws Exception{
 		// Setting up the Test Data Sheet
-		ImportingExcel.setExcelFile("C:\\Users\\nal-n\\Desktop\\Projects\\Applications and Websites\\Software-Testing-Bootcamp\\TestNG\\resources\\dataprovider.xlsx","Sheet1");
+		ImportingExcel.setExcelFile(System.getProperty("user.dir") + "\\resources\\dataprovider.xlsx","Sheet1");
 
 		//Get number of testCases
 		int testcasesNum =  ImportingExcel.getRowsNum();
 		System.out.println("Number of test cases: " + testcasesNum);
 
-		// Fetching test cases row by row and store them in the result array
+		// Fetching test cases row by row and store them in the data array and return it
 		String[][] data = new String[testcasesNum][];
 		for(int i = 0, j = i+1; i < testcasesNum; i++, j++) {
 			testcaseID = "test" + (j);
 			System.out.println("Retrieving data for " + testcaseID);
-			data[i] = ImportingExcel.getTestCaseValues("C:\\Users\\nal-n\\Desktop\\Projects\\Applications and Websites\\Software-Testing-Bootcamp\\TestNG\\resources\\dataprovider.xlsx","Sheet1",j);
+			data[i] = ImportingExcel.getTestCaseValues(System.getProperty("user.dir") + "\\resources\\dataprovider.xlsx","Sheet1",j);
 		}
 		return (data);
 	}

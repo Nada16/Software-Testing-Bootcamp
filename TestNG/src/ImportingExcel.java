@@ -32,9 +32,12 @@ public class ImportingExcel {
 			cell = ExcelWSheet.getRow(RowNum).getCell(ColNum);
 			CellType dataType = cell.getCellType();
 
+			//If cell is empty, return an empty string
 			if  (dataType == CellType.BLANK) {
 				return "";
-			}else{
+			}
+			//Otherwise return the value of the cell
+			else{
 				String CellData = cell.getStringCellValue();
 				return CellData;
 			}
@@ -56,23 +59,20 @@ public class ImportingExcel {
 	}
 
 	public static String[] getTestCaseValues(String path, String sheet, int testcaseRow) throws Exception {
+		//Create a string array with all the values in the testcase row and return it
 		String[] values = null;
 		try{
-			FileInputStream ExcelFile = new FileInputStream(path);
-
-			// Access the required test data sheet
-			ExcelWBook = new XSSFWorkbook(ExcelFile);
-			ExcelWSheet = ExcelWBook.getSheet(sheet);
-
+			//Open the required sheet
+			setExcelFile(path, sheet);
+			
 			int startCol = 1;
 			int i=0;
 			int totalCols = ExcelWSheet.getRow(testcaseRow).getLastCellNum()-1;
-			
 			values=new String[totalCols];
-
+			
+			//Loop through the values in the row and store them
 			for (int j=startCol;j<=totalCols;j++, i++)	{
 				values[i]=getCellData(testcaseRow,j);
-				//System.out.println(values[i]);
 			}
 		}
 		catch (FileNotFoundException e)	{
