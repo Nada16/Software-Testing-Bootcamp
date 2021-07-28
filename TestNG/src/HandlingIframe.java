@@ -26,7 +26,7 @@ public class HandlingIframe {
 
 		driver.switchTo().frame("taboola_iframe"); //switching the frame by ID
 
-		System.out.println("********We are switch to the iframe*******");
+		System.out.println("******We are switch to the iframe*******");
 		Thread.sleep(2000);
 
 		WebElement elem = driver.findElement(By.cssSelector("span.thumbBlock"));
