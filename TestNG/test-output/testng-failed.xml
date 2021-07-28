@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ExcelTest">
+      <class name="HandlingIframe">
         <methods>
-          <include name="beforeMethod"/>
-          <include name="test"/>
-          <include name="afterTest"/>
+          <include name="taboola_iframe"/>
+          <include name="InitialiseDriver"/>
+          <include name="CloseDriver"/>
         </methods>
-      </class> <!-- ExcelTest -->
+      </class> <!-- HandlingIframe -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
