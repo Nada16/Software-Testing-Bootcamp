@@ -5,8 +5,10 @@
     <classes>
       <class name="HandlingIframe">
         <methods>
-          <include name="taboola_iframe"/>
+          <include name="closeTab"/>
           <include name="InitialiseDriver"/>
+          <include name="openNewsIframe"/>
+          <include name="switchToFrame"/>
           <include name="CloseDriver"/>
         </methods>
       </class> <!-- HandlingIframe -->
