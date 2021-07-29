@@ -3,15 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="HandlingIframe">
+      <class name="GridTest">
         <methods>
-          <include name="closeTab"/>
+          <include name="testGoogle"/>
           <include name="InitialiseDriver"/>
-          <include name="openNewsIframe"/>
-          <include name="switchToFrame"/>
-          <include name="CloseDriver"/>
+          <include name="closeDriver"/>
         </methods>
-      </class> <!-- HandlingIframe -->
+      </class> <!-- GridTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
