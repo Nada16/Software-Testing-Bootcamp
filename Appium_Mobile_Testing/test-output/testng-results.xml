@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-08-04T09:49:35 AST" name="Default suite" finished-at="2021-08-04T09:50:11 AST" duration-ms="35267">
+  <suite started-at="2021-08-04T12:01:13 AST" name="Default suite" finished-at="2021-08-04T12:01:41 AST" duration-ms="28937">
     <groups>
     </groups>
-    <test started-at="2021-08-04T09:49:35 AST" name="Default test" finished-at="2021-08-04T09:50:11 AST" duration-ms="35267">
-      <class name="AndroidEmulator">
-        <test-method is-config="true" signature="testCaseSetup()[pri:0, instance:AndroidEmulator@5acf93bb]" started-at="2021-08-04T09:49:35 AST" name="testCaseSetup" finished-at="2021-08-04T09:49:44 AST" duration-ms="9177" status="PASS">
+    <test started-at="2021-08-04T12:01:13 AST" name="Default test" finished-at="2021-08-04T12:01:41 AST" duration-ms="28937">
+      <class name="GoogleSearch">
+        <test-method is-config="true" signature="testCaseSetup()[pri:0, instance:GoogleSearch@5acf93bb]" started-at="2021-08-04T12:01:13 AST" name="testCaseSetup" finished-at="2021-08-04T12:01:30 AST" duration-ms="17030" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCaseSetup -->
-        <test-method signature="testcase1()[pri:0, instance:AndroidEmulator@5acf93bb]" started-at="2021-08-04T09:49:44 AST" name="testcase1" finished-at="2021-08-04T09:50:08 AST" duration-ms="23275" status="PASS">
+        <test-method signature="testcase1()[pri:0, instance:GoogleSearch@5acf93bb]" started-at="2021-08-04T12:01:30 AST" name="testcase1" finished-at="2021-08-04T12:01:39 AST" duration-ms="9301" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testcase1 -->
-        <test-method is-config="true" signature="testCaseTearDown()[pri:0, instance:AndroidEmulator@5acf93bb]" started-at="2021-08-04T09:50:08 AST" name="testCaseTearDown" finished-at="2021-08-04T09:50:11 AST" duration-ms="2775" status="PASS">
+        <test-method is-config="true" signature="testCaseTearDown()[pri:0, instance:GoogleSearch@5acf93bb]" started-at="2021-08-04T12:01:39 AST" name="testCaseTearDown" finished-at="2021-08-04T12:01:41 AST" duration-ms="2560" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCaseTearDown -->
-      </class> <!-- AndroidEmulator -->
+      </class> <!-- GoogleSearch -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
