@@ -48,9 +48,7 @@ public class AndroidEmulator {
 	@AfterTest
 	public void testCaseTearDown() throws InterruptedException {
 		//Stop the test
-		Thread.sleep(2000);
 		driver.quit();
 	}
-
-
+	
 }
