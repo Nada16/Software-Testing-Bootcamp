@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="GoogleSearch2">
+      <class name="AppiumServer">
         <methods>
-          <include name="testCaseSetup"/>
-          <include name="testcase1"/>
-          <include name="testCaseTearDown"/>
+          <include name="startAppiumServer"/>
+          <include name="test"/>
+          <include name="stopAppiumServer"/>
+          <include name="endSession"/>
+          <include name="startSession"/>
         </methods>
-      </class> <!-- GoogleSearch2 -->
+      </class> <!-- AppiumServer -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
