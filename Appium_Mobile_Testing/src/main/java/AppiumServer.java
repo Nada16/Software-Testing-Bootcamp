@@ -13,7 +13,6 @@ import org.testng.annotations.Test;
 
 import java.io.File;
 import java.net.MalformedURLException;
-import java.util.HashMap;
 
 public class AppiumServer {
 	//private String APP = "https://github.com/cloudgrey-io/the-app/releases/download/v1.9.0/TheApp-v1.9.0.app.zip";
@@ -30,10 +29,6 @@ public class AppiumServer {
 		serviceBuilder.usingDriverExecutable(new File("C:\\Program Files\\nodejs\\node.exe"));
 		// Tell serviceBuilder where Appium is installed. Or set this path in an environment variable named APPIUM_PATH
 		serviceBuilder.withAppiumJS(new File("C:\\Users\\nal-n\\AppData\\Local\\Programs\\Appium\\resources\\app\\node_modules\\appium\\build\\lib\\main.js"));
-		// The XCUITest driver requires that a path to the Carthage binary is in the PATH variable. I have this set for my shell, but the Java process does not see it. It can be inserted here.
-		HashMap<String, String> environment = new HashMap();
-		environment.put("PATH", "/usr/local/bin:" + System.getenv("PATH"));
-		serviceBuilder.withEnvironment(environment);
 
 		server = AppiumDriverLocalService.buildService(serviceBuilder);
 		server.start();
@@ -49,18 +44,13 @@ public class AppiumServer {
 		capabilities.setCapability("VERSION", "Q");
 		//Device Name
 		capabilities.setCapability("deviceName", "Nexus S API Q");
-
-		//To open the browser
-
+		
 		//To open the browser
 		capabilities.setCapability(CapabilityType.BROWSER_NAME, "Chrome");
 
 		//Create RemoteWebDriver instance and connect to the Appium server
-		//It will launch the Clock Application in Android Device using Desired Capabilities configurations
 		System.out.println("===================" + server.getUrl());
 		driver = new AppiumDriver(server.getUrl(), capabilities);
-
-		//driver = new IOSDriver<MobileElement>(server.getUrl(), caps);
 	}
 
 	@AfterTest
