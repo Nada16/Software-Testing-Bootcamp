@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="Appium.ChangeWidgets">
+      <class name="Appium.PhoneTap">
         <methods>
-          <include name="testCaseTearDown"/>
           <include name="testCaseSetup"/>
           <include name="testcase1"/>
+          <include name="testCaseTearDown"/>
         </methods>
-      </class> <!-- Appium.ChangeWidgets -->
+      </class> <!-- Appium.PhoneTap -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
