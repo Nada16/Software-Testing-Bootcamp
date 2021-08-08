@@ -1,25 +1,15 @@
 package Appium;
 import java.net.URL;
-import java.time.Duration;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import Appium.Swipe.Direction;
-import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
-import io.appium.java_client.MobileElement;
-import io.appium.java_client.TouchAction;
+
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.pagefactory.AndroidFindBy;
-import io.appium.java_client.touch.WaitOptions;
-import io.appium.java_client.touch.offset.PointOption;
-import static Appium.Swipe.Direction.*;
 
 public class ScrollSwipe {
 	private AndroidDriver driver;
@@ -36,16 +26,7 @@ public class ScrollSwipe {
 		//Device Name
 		capabilities.setCapability("deviceName", "Nexus S API Q");
 
-//		//To open an Application (Clock application). Pass "Android" as Browser, and pass Package, Activity of the application
-//		//Browser name
-//		capabilities.setCapability("BROWSER_NAME", "Android");
-//		//Package name of the application 
-//		capabilities.setCapability("appPackage", "com.google.android.dialer");
-//		// This is Launcher activity of the application
-//		capabilities.setCapability("appActivity", ".extensions.GoogleDialtactsActivity"); 
-
 		//Create RemoteWebDriver instance and connect to the Appium server
-		//It will launch the Clock Application in Android Device using Desired Capabilities configurations
 		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 	}
 
