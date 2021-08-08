@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-08-08T09:23:57Z" name="Default suite" finished-at="2021-08-08T09:24:18Z" duration-ms="20154">
+  <suite started-at="2021-08-08T11:52:25Z" name="Default suite" finished-at="2021-08-08T11:52:54Z" duration-ms="29030">
     <groups>
     </groups>
-    <test started-at="2021-08-08T09:23:57Z" name="Default test" finished-at="2021-08-08T09:24:18Z" duration-ms="20154">
-      <class name="Appium.PhoneTap">
-        <test-method is-config="true" signature="testCaseSetup()[pri:0, instance:Appium.PhoneTap@6bc407fd]" started-at="2021-08-08T12:23:57Z" name="testCaseSetup" finished-at="2021-08-08T12:24:05Z" duration-ms="7625" status="PASS">
+    <test started-at="2021-08-08T11:52:25Z" name="Default test" finished-at="2021-08-08T11:52:54Z" duration-ms="29030">
+      <class name="Appium.UIAutomatorExample">
+        <test-method is-config="true" signature="testCaseSetup()[pri:0, instance:Appium.UIAutomatorExample@3daf7722]" started-at="2021-08-08T14:52:25Z" name="testCaseSetup" finished-at="2021-08-08T14:52:32Z" duration-ms="7752" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCaseSetup -->
-        <test-method signature="testcase1()[pri:0, instance:Appium.PhoneTap@6bc407fd]" started-at="2021-08-08T12:24:05Z" name="testcase1" finished-at="2021-08-08T12:24:16Z" duration-ms="11174" status="PASS">
+        <test-method signature="testcase1()[pri:0, instance:Appium.UIAutomatorExample@3daf7722]" started-at="2021-08-08T14:52:32Z" name="testcase1" finished-at="2021-08-08T14:52:51Z" duration-ms="18842" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testcase1 -->
-        <test-method is-config="true" signature="testCaseTearDown()[pri:0, instance:Appium.PhoneTap@6bc407fd]" started-at="2021-08-08T12:24:16Z" name="testCaseTearDown" finished-at="2021-08-08T12:24:18Z" duration-ms="1332" status="PASS">
+        <test-method is-config="true" signature="testCaseTearDown()[pri:0, instance:Appium.UIAutomatorExample@3daf7722]" started-at="2021-08-08T14:52:51Z" name="testCaseTearDown" finished-at="2021-08-08T14:52:54Z" duration-ms="2406" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCaseTearDown -->
-      </class> <!-- Appium.PhoneTap -->
+      </class> <!-- Appium.UIAutomatorExample -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

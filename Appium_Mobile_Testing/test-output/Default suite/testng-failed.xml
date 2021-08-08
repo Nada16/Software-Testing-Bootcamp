@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="Appium.PhoneTap">
+      <class name="Appium.UIAutomatorExample">
         <methods>
           <include name="testCaseSetup"/>
-          <include name="testcase1"/>
           <include name="testCaseTearDown"/>
+          <include name="testcase1"/>
         </methods>
-      </class> <!-- Appium.PhoneTap -->
+      </class> <!-- Appium.UIAutomatorExample -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
