@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="Selenddroid.SelendroidExample">
+      <class name="Appium.xpathMacaca">
         <methods>
+          <include name="testCaseSetup"/>
           <include name="testcase1"/>
         </methods>
-      </class> <!-- Selenddroid.SelendroidExample -->
+      </class> <!-- Appium.xpathMacaca -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
