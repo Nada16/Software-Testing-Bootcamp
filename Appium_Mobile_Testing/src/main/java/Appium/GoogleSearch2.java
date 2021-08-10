@@ -40,6 +40,7 @@ public class GoogleSearch2 {
 		driver.findElementByAccessibilityId("Chrome").click();
 		//Check what context we're using
 		System.out.println("Current context: " + driver.getContext());
+		Thread.sleep(2000);
 		
 		//Print contexts that we can change to
 		@SuppressWarnings("unchecked")

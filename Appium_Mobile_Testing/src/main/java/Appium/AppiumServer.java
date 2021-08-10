@@ -23,6 +23,7 @@ public class AppiumServer {
 
 	@BeforeSuite
 	public static void startAppiumServer() {
+		//Setup Appium Server
 		AppiumServiceBuilder serviceBuilder = new AppiumServiceBuilder();
 		// Use any port, in case the default 4723 is already taken (maybe by another Appium server)
 		serviceBuilder.usingAnyFreePort();
@@ -30,7 +31,7 @@ public class AppiumServer {
 		serviceBuilder.usingDriverExecutable(new File("C:\\Program Files\\nodejs\\node.exe"));
 		// Tell serviceBuilder where Appium is installed. Or set this path in an environment variable named APPIUM_PATH
 		serviceBuilder.withAppiumJS(new File("C:\\Users\\nal-n\\AppData\\Local\\Programs\\Appium\\resources\\app\\node_modules\\appium\\build\\lib\\main.js"));
-
+		//Start server
 		server = AppiumDriverLocalService.buildService(serviceBuilder);
 		server.start();
 	}
@@ -53,9 +54,18 @@ public class AppiumServer {
 		System.out.println("===================" + server.getUrl());
 		driver = new AppiumDriver(server.getUrl(), capabilities);
 	}
-
+	
+	@Test
+	public void test() throws InterruptedException {
+		//Go to google.com and search for conding dojo
+		driver.get("https://www.google.com/");
+		Thread.sleep(500);
+		driver.findElementByName("q").sendKeys("Coding Dojo" + Keys.ENTER);
+	}
+	
 	@AfterTest
 	public void endSession() {
+		//Close the driver
 		try {
 			driver.quit();
 		} catch (Exception ign) {}
@@ -63,13 +73,7 @@ public class AppiumServer {
 
 	@AfterSuite
 	public static void stopAppiumServer() {
+		//Stop the server
 		server.stop();
-	}
-
-	@Test
-	public void test() throws InterruptedException {
-		driver.get("https://www.google.com/");
-		Thread.sleep(500);
-		driver.findElementByName("q").sendKeys("Coding Dojo" + Keys.ENTER);
 	}
 }

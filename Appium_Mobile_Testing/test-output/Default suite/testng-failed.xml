@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="Appium.AmazonSignIn">
+      <class name="Appium.GoogleSearch2">
         <methods>
+          <include name="testCaseTearDown"/>
           <include name="testcase1"/>
           <include name="testCaseSetup"/>
         </methods>
-      </class> <!-- Appium.AmazonSignIn -->
+      </class> <!-- Appium.GoogleSearch2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
