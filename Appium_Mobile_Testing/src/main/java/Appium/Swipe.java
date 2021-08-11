@@ -26,7 +26,7 @@ public class Swipe {
 
 		final int PRESS_TIME = 200; // ms
 
-		int edgeBorder = 10; // better avoid edges
+		int edgeBorder = 5; // better avoid edges
 		PointOption pointOptionStart, pointOptionEnd;
 
 		// init screen variables
