@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="Appium.xpathMacaca">
+      <class name="Appium.TwitterLogin">
         <methods>
-          <include name="testCaseSetup"/>
+          <include name="testCaseTearDown"/>
           <include name="testcase1"/>
+          <include name="testCaseSetup"/>
         </methods>
-      </class> <!-- Appium.xpathMacaca -->
+      </class> <!-- Appium.TwitterLogin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
