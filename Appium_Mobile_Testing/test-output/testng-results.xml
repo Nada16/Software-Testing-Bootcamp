@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-08-11T09:14:51Z" name="Default suite" finished-at="2021-08-11T09:15:38Z" duration-ms="47383">
+  <suite started-at="2021-08-11T12:27:56Z" name="Default suite" finished-at="2021-08-11T12:28:18Z" duration-ms="21929">
     <groups>
     </groups>
-    <test started-at="2021-08-11T09:14:51Z" name="Default test" finished-at="2021-08-11T09:15:38Z" duration-ms="47383">
-      <class name="Appium.TwitterLogin">
-        <test-method is-config="true" signature="testCaseSetup()[pri:0, instance:Appium.TwitterLogin@be68757]" started-at="2021-08-11T12:14:51Z" name="testCaseSetup" finished-at="2021-08-11T12:15:08Z" duration-ms="16993" status="PASS">
+    <test started-at="2021-08-11T12:27:56Z" name="Default test" finished-at="2021-08-11T12:28:18Z" duration-ms="21929">
+      <class name="Appium.PinchZoom">
+        <test-method is-config="true" signature="testCaseSetup()[pri:0, instance:Appium.PinchZoom@d41f816]" started-at="2021-08-11T15:27:56Z" name="testCaseSetup" finished-at="2021-08-11T15:28:07Z" duration-ms="10590" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCaseSetup -->
-        <test-method signature="testcase1()[pri:0, instance:Appium.TwitterLogin@be68757]" started-at="2021-08-11T12:15:08Z" name="testcase1" finished-at="2021-08-11T12:15:31Z" duration-ms="23057" status="PASS">
+        <test-method signature="testcase1()[pri:0, instance:Appium.PinchZoom@d41f816]" started-at="2021-08-11T15:28:07Z" name="testcase1" finished-at="2021-08-11T15:28:14Z" duration-ms="7612" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testcase1 -->
-        <test-method is-config="true" signature="testCaseTearDown()[pri:0, instance:Appium.TwitterLogin@be68757]" started-at="2021-08-11T12:15:31Z" name="testCaseTearDown" finished-at="2021-08-11T12:15:38Z" duration-ms="7316" status="PASS">
+        <test-method is-config="true" signature="testCaseTearDown()[pri:0, instance:Appium.PinchZoom@d41f816]" started-at="2021-08-11T15:28:14Z" name="testCaseTearDown" finished-at="2021-08-11T15:28:18Z" duration-ms="3697" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCaseTearDown -->
-      </class> <!-- Appium.TwitterLogin -->
+      </class> <!-- Appium.PinchZoom -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
