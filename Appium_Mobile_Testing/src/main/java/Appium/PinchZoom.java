@@ -70,7 +70,6 @@ public class PinchZoom {
 		//perform the zooming with a multi touch action
 		final MultiTouchAction action= new MultiTouchAction(driver);
 		action.add(finger1).add(finger2).perform();
-
 		System.out.println ("Zoom Done");
 	}
 
