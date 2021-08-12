@@ -5,8 +5,8 @@
     <classes>
       <class name="Appium.PinchZoom">
         <methods>
-          <include name="testCaseTearDown"/>
           <include name="testcase1"/>
+          <include name="reportSetup"/>
           <include name="testCaseSetup"/>
         </methods>
       </class> <!-- Appium.PinchZoom -->

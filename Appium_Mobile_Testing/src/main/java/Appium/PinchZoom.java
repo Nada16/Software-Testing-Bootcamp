@@ -9,13 +9,16 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MultiTouchAction;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.touch.offset.PointOption;
 
-public class PinchZoom {
+public class PinchZoom extends ExtentReporter{
 	private AppiumDriver driver;
 
 	@BeforeTest
@@ -39,12 +42,16 @@ public class PinchZoom {
 
 	@Test
 	public void testcase1()throws Exception {
+		ExtentTest test = extent.createTest("sample test");
 		//Wait for the app to load. Then, click on Library. Then, swipe down to hide explore nearby
 		Thread.sleep(4000);
 		new Swipe(Swipe.Direction.DOWN, driver);
 
 		//Zoom on the map
 		zoom(driver);
+		test.log(Status.PASS, "Test has passed!");
+		test.log(Status.FAIL, "Test has failed!");
+
 	}
 	
 	public void zoom(AppiumDriver driver) {
