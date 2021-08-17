@@ -49,8 +49,8 @@ public class PhoneTap {
 		action.tap(element(driver.findElementById("com.android.contacts:id/editor_menu_save_button"))).perform();
 		Thread.sleep(500);
 		//Use the more opetions menu to delete the contact
-		action.tap(element(driver.findElementByAccessibilityId("More options"))).perform();
-		Thread.sleep(500);
+		driver.findElementByAccessibilityId("More options").click();
+		Thread.sleep(1000);
 		action.tap(element((WebElement) driver.findElementsById("android:id/content").get(1))).perform();
 		Thread.sleep(500);
 		action.tap(element(driver.findElementById("android:id/button1"))).perform();
