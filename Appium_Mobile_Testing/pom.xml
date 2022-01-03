@@ -42,14 +42,14 @@
 		<dependency>
 			<groupId>io.selendroid</groupId>
 			<artifactId>selendroid-client</artifactId>
-			<version>0.17.0</version>
+			<version>0.15.0</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/io.selendroid/selendroid-standalone -->
 		<dependency>
 			<groupId>io.selendroid</groupId>
 			<artifactId>selendroid-standalone</artifactId>
-			<version>0.17.0</version>
+			<version>0.15.0</version>
 			<scope>test</scope>
 		</dependency>
 

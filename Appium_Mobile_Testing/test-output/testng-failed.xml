@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="Appium.GenyMotionParallel">
+      <class name="Selenddroid.SelendroidExample">
         <methods>
-          <include name="initializeDriver" invocation-numbers="1"/>
+          <include name="testcase1"/>
         </methods>
-      </class> <!-- Appium.GenyMotionParallel -->
+      </class> <!-- Selenddroid.SelendroidExample -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
